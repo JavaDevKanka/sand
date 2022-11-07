@@ -7,7 +7,10 @@ public class Solution {
         Statement statement = connections.DbConnection().createStatement();
         ResultSet rs =  statement.executeQuery("select * from people");
         while (rs.next()) {
-            System.out.println(rs.getString("age"));
+            rs.getString("name");
+            rs.getString("age");
+            System.out.println(rs.getString("age") + " " + rs.getString("name"));
+            System.out.println();
         }
     }
 
